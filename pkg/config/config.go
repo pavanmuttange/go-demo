@@ -22,7 +22,7 @@ func ConnectDB() {
 	host := os.Getenv("HOST")
 	port := os.Getenv("PORT")
 
-	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable", host, "postgres", "postgres", "postgres", port)
+	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable", "dpg-cpohueij1k6c73a7ku50-a", "pavandb_user", "VpUJWoN5TYNlPRBoMTrWij0jWHYqoivS", "pavandb", "5432")
 
 	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
