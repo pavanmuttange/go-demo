@@ -2,7 +2,6 @@ package config
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
@@ -18,9 +17,6 @@ func ConnectDB() {
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-
-	host := os.Getenv("HOST")
-	port := os.Getenv("PORT")
 
 	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable", "dpg-cpohueij1k6c73a7ku50-a", "pavandb_user", "VpUJWoN5TYNlPRBoMTrWij0jWHYqoivS", "pavandb", "5432")
 
